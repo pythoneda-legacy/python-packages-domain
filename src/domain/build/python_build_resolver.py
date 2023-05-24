@@ -1,9 +1,9 @@
-from domain.event import Event
-from domain.event_emitter import EventEmitter
-from domain.event_listener import EventListener
-from domain.python.build.python_build_strategy_requested import PythonBuildStrategyRequested
-from domain.python.python_package import PythonPackage
-from domain.python.python_package_in_progress import PythonPackageInProgress
+from pythoneda.domain.event import Event
+from pythoneda.domain.event_emitter import EventEmitter
+from pythoneda.domain.event_listener import EventListener
+from domain.build.python_build_strategy_requested import PythonBuildStrategyRequested
+from domain.python_package import PythonPackage
+from domain.python_package_in_progress import PythonPackageInProgress
 
 import logging
 from typing import List, Type

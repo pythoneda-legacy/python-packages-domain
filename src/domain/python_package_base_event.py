@@ -1,6 +1,6 @@
-from domain.value_object import attribute, primary_key_attribute
-from domain.event import Event
-from domain.git.git_repo import GitRepo
+from pythoneda.domain.value_object import attribute, primary_key_attribute
+from pythoneda.domain.event import Event
+from ecosystem_git_repositories.domain.git_repo import GitRepo
 
 
 class PythonPackageBaseEvent(Event):

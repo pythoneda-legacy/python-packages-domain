@@ -1,6 +1,6 @@
-from domain.python.python_package import PythonPackage
-from domain.python.python_package_base_event import PythonPackageBaseEvent
-from domain.value_object import attribute
+from domain.python_package import PythonPackage
+from domain.python_package_base_event import PythonPackageBaseEvent
+from pythoneda.domain.value_object import attribute
 
 
 class PythonPackageResolved(PythonPackageBaseEvent):

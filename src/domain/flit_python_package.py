@@ -1,6 +1,5 @@
-from domain.python.python_package import PythonPackage
-from ecosystem_git.domain.git.git_repo import GitRepo
-from pythoneda.domain.ports import Ports
+from domain.python_package import PythonPackage
+from ecosystem_git_repositories.domain.git.git_repo import GitRepo
 
 import toml
 from typing import Dict, List

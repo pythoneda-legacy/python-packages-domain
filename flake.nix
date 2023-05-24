@@ -4,10 +4,12 @@
   inputs = rec {
     nixos.url = "github:NixOS/nixpkgs/nixos-22.11";
     flake-utils.url = "github:numtide/flake-utils";
+    pythoneda.url = "github:rydnr/pythoneda";
     poetry2nix = {
       url = "github:nix-community/poetry2nix";
       inputs.nixpkgs.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
+      inputs.pythoneda.follows = "nixos";
     };
   };
   outputs = inputs:
@@ -23,8 +25,8 @@
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
-          pythoneda = mkPoetryApplication rec {
-            pname = "pythoneda";
+          ecosystem_python_packages = mkPoetryApplication rec {
+            pname = "ecosystem_python_packages";
             version = "0.0.alpha.1";
             format = "pyproject";
             projectDir = ./.;
@@ -35,7 +37,7 @@
               inherit description license homepage maintainers;
             };
           };
-          default = packages.pythoneda;
+          default = packages.ecosystem_python_packages;
           meta = with lib; {
             inherit description license homepage maintainers;
           };

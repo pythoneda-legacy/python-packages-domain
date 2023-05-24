@@ -1,7 +1,7 @@
-from domain.ports import Ports
-from domain.git.git_repo import GitRepo
-from domain.python.build.pyprojecttoml_utils import PyprojecttomlUtils
-from domain.python.python_package import PythonPackage
+from domain.build.pyprojecttoml_utils import PyprojecttomlUtils
+from domain.python_package import PythonPackage
+from ecosystem_git_repositories.domain.git_repo import GitRepo
+from pythoneda.domain.ports import Ports
 
 from typing import Dict, List
 

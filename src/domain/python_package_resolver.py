@@ -1,16 +1,16 @@
-from domain.event import Event
-from domain.event_emitter import EventEmitter
-from domain.event_listener import EventListener
-from domain.python.build.python_build_strategy_requested import PythonBuildStrategyRequested
-from domain.python.build.setuppy_strategy_found import SetuppyStrategyFound
-from domain.python.python_package import PythonPackage
-from domain.python.python_package_in_progress import PythonPackageInProgress
-from domain.python.python_package_requested import PythonPackageRequested
-from domain.python.python_package_resolved import PythonPackageResolved
-from domain.git.git_repo import GitRepo
-from domain.git.git_repo_found import GitRepoFound
-from domain.git.git_repo_requested import GitRepoRequested
-from domain.nix.python.nix_python_package_in_nixpkgs import NixPythonPackageInNixpkgs
+from domain.build.python_build_strategy_requested import PythonBuildStrategyRequested
+from domain.build.setuppy_strategy_found import SetuppyStrategyFound
+from domain.python_package import PythonPackage
+from domain.python_package_in_progress import PythonPackageInProgress
+from domain.python_package_requested import PythonPackageRequested
+from domain.python_package_resolved import PythonPackageResolved
+from ecosystem_git_repositories.domain.git_repo import GitRepo
+from ecosystem_git_repositories.domain.git_repo_found import GitRepoFound
+from ecosystem_git_repositories.domain.git_repo_requested import GitRepoRequested
+from ecosystem_nix_shared.domain.python.nix_python_package_in_nixpkgs import NixPythonPackageInNixpkgs
+from pythoneda.domain.event import Event
+from pythoneda.domain.event_emitter import EventEmitter
+from pythoneda.domain.event_listener import EventListener
 
 
 import logging

@@ -1,5 +1,5 @@
-from domain.git.git_repo import GitRepo
-from domain.python.python_package_base_event import PythonPackageBaseEvent
+from ecosystem_git_repositories.domain.git_repo import GitRepo
+from domain.python_package_base_event import PythonPackageBaseEvent
 
 
 class PythonPackageRequested(PythonPackageBaseEvent):

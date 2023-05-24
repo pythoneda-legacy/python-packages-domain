@@ -1,7 +1,8 @@
-from domain.event import Event
-from domain.python.python_package import PythonPackage
+from domain.python_package import PythonPackage
+from domain.python_package_base_event import PythonPackageBaseEvent
+from pythoneda.domain.value_object import primary_key
 
-class PythonPackageCreated(Event):
+class PythonPackageCreated(PythonPackageBaseEvent):
     """
     Represents the event when a PythonPackage has been created.
     """
@@ -11,8 +12,6 @@ class PythonPackageCreated(Event):
         self._package = package
 
     @property
+    @primary_key
     def package(self):
         return self._package
-
-    def __str__(self):
-        return f'{{ "name": "{__name__}", "package": "{self._package}" }}'

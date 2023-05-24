@@ -1,14 +1,14 @@
-from domain.entity import Entity
-from domain.event import Event
-from domain.ports import Ports
-from domain.git.git_repo import GitRepo
-from domain.git.git_repo_found import GitRepoFound
-from domain.git.git_repo_repo import GitRepoRepo
-from domain.git.git_repo_requested import GitRepoRequested
-from domain.nix.nix_prefetch_url_failed import NixPrefetchUrlFailed
-from domain.nix.python.nix_python_package import NixPythonPackage
-from domain.python.unsupported_python_package import UnsupportedPythonPackage
-from domain.value_object import attribute, primary_key_attribute
+from ecosystem_git_repositories.domain.git.git_repo import GitRepo
+from ecosystem_git_repositories.domain.git.git_repo_found import GitRepoFound
+from ecosystem_git_repositories.domain.git.git_repo_repo import GitRepoRepo
+from ecosystem_git_repositories.domain.git.git_repo_requested import GitRepoRequested
+from ecosystem_nix_shared.domain.nix_prefetch_url_failed import NixPrefetchUrlFailed
+from ecosystem_nix_shared.domain.python.nix_python_package import NixPythonPackage
+from domain.unsupported_python_package import UnsupportedPythonPackage
+from pythoneda.domain.entity import Entity
+from pythoneda.domain.event import Event
+from pythoneda.domain.ports import Ports
+from pythoneda.domain.value_object import attribute, primary_key_attribute
 
 import logging
 import os

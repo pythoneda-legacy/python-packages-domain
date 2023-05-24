@@ -1,6 +1,5 @@
-from domain.ports import Ports
-from domain.git.git_repo import GitRepo
-from domain.python.python_package import PythonPackage
+from domain.python_package import PythonPackage
+from ecosystem_git_repositories.domain.git_repo import GitRepo
 
 from typing import Dict, List
 
