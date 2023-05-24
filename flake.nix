@@ -5,11 +5,15 @@
     nixos.url = "github:NixOS/nixpkgs/nixos-22.11";
     flake-utils.url = "github:numtide/flake-utils";
     pythoneda.url = "github:rydnr/pythoneda";
+    ecosystem_nix_shared.url = "github:rydnr/ecosystem-nix-shared";
+    ecosystem_git_repositories.url = "github:rydnr/ecosystem-git-repositories";
     poetry2nix = {
       url = "github:nix-community/poetry2nix";
       inputs.nixpkgs.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.pythoneda.follows = "nixos";
+      inputs.ecosystem_git_repositories.follows = "nixos";
+      inputs.ecosystem_nix_shared.follows = "nixos";
     };
   };
   outputs = inputs:
@@ -31,6 +35,11 @@
             format = "pyproject";
             projectDir = ./.;
 
+            propagatedBuildInputs = with pythonPackages; [
+              pythoneda
+              ecosystem_nix_shared
+              ecosystem_git_repositories
+            ];
             pythonImportsCheck = [ ];
 
             meta = with pkgs.lib; {
