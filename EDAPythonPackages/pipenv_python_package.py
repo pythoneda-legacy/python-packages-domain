@@ -1,5 +1,5 @@
-from domain.python_package import PythonPackage
-from ecosystem_git_repositories.domain.git_repo import GitRepo
+from EDAPythonPackages.python_package import PythonPackage
+from EDAGitRepositories.git_repo import GitRepo
 
 from typing import Dict, List
 

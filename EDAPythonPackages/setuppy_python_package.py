@@ -1,15 +1,15 @@
-from domain.build.error_creating_a_virtual_environment import ErrorCreatingAVirtualEnvironment
-from domain.build.error_installing_setuptools import ErrorInstallingSetuptools
-from domain.build.more_than_one_egg_info_folder import MoreThanOneEggInfoFolder
-from domain.build.no_egg_info_folder_found import NoEggInfoFolderFound
-from domain.build.python_setuppy_egg_info_failed import PythonSetuppyEggInfoFailed
-from domain.build.requirementstxt_utils import RequirementstxtUtils
-from domain.build.setupcfg_utils import SetupcfgUtils
-from domain.build.setuppy_strategy_found import SetuppyStrategyFound
-from domain.python_package import PythonPackage
-from ecosystem_git_repositories.domain.git_repo import GitRepo
-from pythoneda.domain.event import Event
-from pythoneda.domain.ports import Ports
+from EDAPythonPackages.build.error_creating_a_virtual_environment import ErrorCreatingAVirtualEnvironment
+from EDAPythonPackages.build.error_installing_setuptools import ErrorInstallingSetuptools
+from EDAPythonPackages.build.more_than_one_egg_info_folder import MoreThanOneEggInfoFolder
+from EDAPythonPackages.build.no_egg_info_folder_found import NoEggInfoFolderFound
+from EDAPythonPackages.build.python_setuppy_egg_info_failed import PythonSetuppyEggInfoFailed
+from EDAPythonPackages.build.requirementstxt_utils import RequirementstxtUtils
+from EDAPythonPackages.build.setupcfg_utils import SetupcfgUtils
+from EDAPythonPackages.build.setuppy_strategy_found import SetuppyStrategyFound
+from EDAPythonPackages.python_package import PythonPackage
+from EDAGitRepositories_repo import GitRepo
+from PythonEDA.event import Event
+from PythonEDA.ports import Ports
 
 import logging
 import os

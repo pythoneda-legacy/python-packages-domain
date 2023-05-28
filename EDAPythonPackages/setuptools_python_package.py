@@ -1,6 +1,6 @@
-from ecosystem_git_repositories.domain.git_repo import GitRepo
-from domain.build.setupcfg_utils import SetupcfgUtils
-from domain.python_package import PythonPackage
+from EDAGitRepositories_repo import GitRepo
+from EDAPythonPackages.build.setupcfg_utils import SetupcfgUtils
+from EDAPythonPackages.python_package import PythonPackage
 
 import logging
 from typing import Dict, List

@@ -1,5 +1,5 @@
-from domain.python_package_base_event import PythonPackageBaseEvent
-from ecosystem_git_repositories.domain.git_repo import GitRepo
+from EDAGitRepositories_repo import GitRepo
+from EDAPythonPackages.python_package_base_event import PythonPackageBaseEvent
 
 
 class PythonBuildStrategyRequested(PythonPackageBaseEvent):

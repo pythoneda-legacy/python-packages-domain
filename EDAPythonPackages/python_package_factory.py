@@ -1,10 +1,10 @@
-from domain.python_package import PythonPackage
-from domain.python_package_created import PythonPackageCreated
-from domain.unsupported_python_package import UnsupportedPythonPackage
-from ecosystem_git_repositories.domain.git_repo_found import GitRepoFound
-from ecosystem_git_repositories.domain.git_repo_requested import GitRepoRequested
-from pythoneda.domain.event_emitter import EventEmitter
-from pythoneda.domain.event_listener import EventListener
+from EDAGitRepositories.git_repo_found import GitRepoFound
+from EDAGitRepositories.git_repo_requested import GitRepoRequested
+from EDAPythonPackages.python_package import PythonPackage
+from EDAPythonPackages.python_package_created import PythonPackageCreated
+from EDAPythonPackages.unsupported_python_package import UnsupportedPythonPackage
+from PythonEDA.event_emitter import EventEmitter
+from PythonEDA.event_listener import EventListener
 
 import asyncio
 import logging

@@ -1,19 +1,31 @@
 {
-  description = "The domain of Python packages in the common ecosystem";
+  description = "Python packages in PythonEDA";
 
   inputs = rec {
     nixos.url = "github:NixOS/nixpkgs/nixos-22.11";
     flake-utils.url = "github:numtide/flake-utils";
-    pythoneda.url = "github:rydnr/pythoneda";
-    ecosystem_nix_shared.url = "github:rydnr/ecosystem-nix-shared";
-    ecosystem_git_repositories.url = "github:rydnr/ecosystem-git-repositories";
+    pythoneda = {
+      url = "github:rydnr/pythoneda";
+      inputs.nixos.follows = "nixos";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.poetry2nix.follows = "flake-utils";
+    };
+    pythoneda-git-repositories = {
+      url = "github:rydnr/pythoneda-git-repositories";
+      inputs.nixos.follows = "nixos";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.poetry2nix.follows = "flake-utils";
+    };
+    pythoneda-nix-shared = {
+      url = "github:rydnr/pythoneda-nix-shared";
+      inputs.nixos.follows = "nixos";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.poetry2nix.follows = "flake-utils";
+    };
     poetry2nix = {
       url = "github:nix-community/poetry2nix";
       inputs.nixpkgs.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
-      inputs.pythoneda.follows = "nixos";
-      inputs.ecosystem_git_repositories.follows = "nixos";
-      inputs.ecosystem_nix_shared.follows = "nixos";
     };
   };
   outputs = inputs:
@@ -23,21 +35,20 @@
         pkgs = import nixos { inherit system; };
         python = pkgs.python3;
         pythonPackages = python.pkgs;
-        inherit (poetry2nix.legacyPackages.${system}) mkPoetryApplication;
-        description = "The domain of Python packages in the common ecosystem";
+        description = "Python packages in PythonEDA";
         license = pkgs.lib.licenses.gpl3;
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
-          ecosystem_python_packages = pythonPackages.buildPythonPackage rec {
-            pname = "ecosystem_python_packages";
+          pythoneda_python_packages = pythonPackages.buildPythonPackage rec {
+            pname = "pythoneda_python_packages";
             version = "0.0.alpha.1";
             src = ./.;
 
             propagatedBuildInputs = with pythonPackages; [
-              pythoneda
-              ecosystem_nix_shared
-              ecosystem_git_repositories
+              pythoneda.packages.${system}.pythoneda
+              pythoneda-git-repositories.packages.${system}.pythoneda-git-repositories
+              pythoneda-nix-shared.packages.${system}.pythoneda-nix-shared
             ];
             pythonImportsCheck = [ ];
 
@@ -45,7 +56,7 @@
               inherit description license homepage maintainers;
             };
           };
-          default = packages.ecosystem_python_packages;
+          default = packages.pythoneda_python_packages;
           meta = with lib; {
             inherit description license homepage maintainers;
           };

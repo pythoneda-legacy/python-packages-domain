@@ -1,5 +1,5 @@
-from pythoneda.domain.entity import Entity
-from pythoneda.domain.value_object import attribute, primary_key_attribute
+from PythonEDA.entity import Entity
+from PythonEDA.value_object import attribute, primary_key_attribute
 
 from typing import Dict
 

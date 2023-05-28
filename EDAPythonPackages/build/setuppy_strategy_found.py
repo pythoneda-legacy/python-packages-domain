@@ -1,6 +1,6 @@
-from domain.python_package import PythonPackage
-from domain.python_package_base_event import PythonPackageBaseEvent
-from pythoneda.domain.value_object import attribute
+from EDAPythonPackages.python_package import PythonPackage
+from EDAPythonPackages.python_package_base_event import PythonPackageBaseEvent
+from PythonEDA.value_object import attribute
 
 
 class SetuppyStrategyFound(PythonPackageBaseEvent):
