@@ -29,11 +29,10 @@
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
-          ecosystem_python_packages = mkPoetryApplication rec {
+          ecosystem_python_packages = pythonPackages.buildPythonPackage rec {
             pname = "ecosystem_python_packages";
             version = "0.0.alpha.1";
-            format = "pyproject";
-            projectDir = ./.;
+            src = ./.;
 
             propagatedBuildInputs = with pythonPackages; [
               pythoneda
