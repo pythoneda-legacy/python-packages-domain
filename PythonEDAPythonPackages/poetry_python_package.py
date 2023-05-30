@@ -1,7 +1,7 @@
-from EDAPythonPackages.build.pyprojecttoml_utils import PyprojecttomlUtils
-from EDAPythonPackages.python_package import PythonPackage
-from EDAGitRepositories.git_repo import GitRepo
 from PythonEDA.ports import Ports
+from PythonEDAGitRepositories.git_repo import GitRepo
+from PythonEDAPythonPackages.build.pyprojecttoml_utils import PyprojecttomlUtils
+from PythonEDAPythonPackages.python_package import PythonPackage
 
 from typing import Dict, List
 

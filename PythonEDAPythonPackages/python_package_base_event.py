@@ -1,6 +1,6 @@
-from EDAGitRepositories.git_repo import GitRepo
 from PythonEDA.event import Event
 from PythonEDA.value_object import attribute, primary_key_attribute
+from PythonEDAGitRepositories.git_repo import GitRepo
 
 
 class PythonPackageBaseEvent(Event):

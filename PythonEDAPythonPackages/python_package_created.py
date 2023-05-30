@@ -1,6 +1,6 @@
-from EDAPythonPackages.python_package import PythonPackage
-from EDAPythonPackages.python_package_base_event import PythonPackageBaseEvent
 from PythonEDA.value_object import primary_key
+from PythonEDAPythonPackages.python_package import PythonPackage
+from PythonEDAPythonPackages.python_package_base_event import PythonPackageBaseEvent
 
 class PythonPackageCreated(PythonPackageBaseEvent):
     """

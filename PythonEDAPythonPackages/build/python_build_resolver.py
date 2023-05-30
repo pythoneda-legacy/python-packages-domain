@@ -1,9 +1,9 @@
 from PythonEDA.event import Event
 from PythonEDA.event_emitter import EventEmitter
 from PythonEDA.event_listener import EventListener
-from EDAPythonPackages.build.python_build_strategy_requested import PythonBuildStrategyRequested
-from EDAPythonPackages.python_package import PythonPackage
-from EDAPythonPackages.python_package_in_progress import PythonPackageInProgress
+from PythonEDAPythonPackages.build.python_build_strategy_requested import PythonBuildStrategyRequested
+from PythonEDAPythonPackages.python_package import PythonPackage
+from PythonEDAPythonPackages.python_package_in_progress import PythonPackageInProgress
 
 import logging
 from typing import List, Type

@@ -1,6 +1,6 @@
-from EDAPythonPackages.python_package_metadata import PythonPackageMetadata
 from PythonEDA.entity_in_progress import EntityInProgress
 from PythonEDA.value_object import attribute, primary_key_attribute
+from PythonEDAPythonPackages.python_package_metadata import PythonPackageMetadata
 
 
 class PythonPackageInProgress(EntityInProgress):

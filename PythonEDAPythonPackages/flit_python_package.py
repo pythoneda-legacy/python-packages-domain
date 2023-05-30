@@ -1,5 +1,5 @@
-from EDAPythonPackages.python_package import PythonPackage
-from EDAGitRepositories.git_repo import GitRepo
+from PythonEDAPythonPackages.python_package import PythonPackage
+from PythonEDAGitRepositories.git_repo import GitRepo
 
 import toml
 from typing import Dict, List

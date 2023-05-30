@@ -1,14 +1,14 @@
-from EDAGitRepositories.git_repo import GitRepo
-from EDAGitRepositories.git_repo_found import GitRepoFound
-from EDAGitRepositories.git_repo_repo import GitRepoRepo
-from EDAGitRepositories.git_repo_requested import GitRepoRequested
-from EDANixShared.nix_prefetch_url_failed import NixPrefetchUrlFailed
-from EDANixShared.python.nix_python_package import NixPythonPackage
-from EDAPythonPackages.unsupported_python_package import UnsupportedPythonPackage
 from PythonEDA.entity import Entity
 from PythonEDA.event import Event
 from PythonEDA.ports import Ports
 from PythonEDA.value_object import attribute, primary_key_attribute
+from PythonEDAGitRepositories.git_repo import GitRepo
+from PythonEDAGitRepositories.git_repo_found import GitRepoFound
+from PythonEDAGitRepositories.git_repo_repo import GitRepoRepo
+from PythonEDAGitRepositories.git_repo_requested import GitRepoRequested
+from PythonEDANixShared.nix_prefetch_url_failed import NixPrefetchUrlFailed
+from PythonEDANixShared.python.nix_python_package import NixPythonPackage
+from PythonEDAPythonPackages.unsupported_python_package import UnsupportedPythonPackage
 
 import logging
 import os

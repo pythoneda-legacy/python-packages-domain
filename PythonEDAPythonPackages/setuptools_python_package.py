@@ -1,6 +1,6 @@
-from EDAGitRepositories_repo import GitRepo
-from EDAPythonPackages.build.setupcfg_utils import SetupcfgUtils
-from EDAPythonPackages.python_package import PythonPackage
+from PythonEDAGitRepositories_repo import GitRepo
+from PythonEDAPythonPackages.build.setupcfg_utils import SetupcfgUtils
+from PythonEDAPythonPackages.python_package import PythonPackage
 
 import logging
 from typing import Dict, List

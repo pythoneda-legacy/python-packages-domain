@@ -1,5 +1,5 @@
-from EDAPythonPackages.python_package_metadata import PythonPackageMetadata
 from PythonEDA.repo import Repo
+from PythonEDAPythonPackages.python_package_metadata import PythonPackageMetadata
 
 from typing import List
 
