@@ -10,20 +10,20 @@
       inputs.flake-utils.follows = "flake-utils";
     };
     pythoneda = {
-      url = "github:rydnr/pythoneda/0.0.1a5";
+      url = "github:pythoneda/base/0.0.1a7";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "flake-utils";
     };
     pythoneda-git-repositories = {
-      url = "github:rydnr/pythoneda-git-repositories/0.0.1a3";
+      url = "github:pythoneda/git-repositories/0.0.1a4";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
       inputs.poetry2nix.follows = "flake-utils";
     };
-    pythoneda-nix-shared = {
-      url = "github:rydnr/pythoneda-nix-shared/0.0.1a3";
+    pythoneda-shared-nix = {
+      url = "github:pythoneda-shared/nix/0.0.1a4";
       inputs.pythoneda.follows = "pythoneda";
       inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
@@ -39,12 +39,13 @@
         pythonPackages = python.pkgs;
         description = "Python packages in PythonEDA";
         license = pkgs.lib.licenses.gpl3;
+        homepage = "https://github.com/pythoneda/python-packages";
         maintainers = with pkgs.lib.maintainers; [ ];
       in rec {
         packages = {
           pythoneda-python-packages = pythonPackages.buildPythonPackage rec {
             pname = "pythoneda-python-packages";
-            version = "0.0.1a2";
+            version = "0.0.1a3";
             src = ./.;
             format = "pyproject";
 
@@ -53,7 +54,7 @@
             propagatedBuildInputs = with pythonPackages; [
               pythoneda.packages.${system}.pythoneda
               pythoneda-git-repositories.packages.${system}.pythoneda-git-repositories
-              pythoneda-nix-shared.packages.${system}.pythoneda-nix-shared
+              pythoneda-shared-nix.packages.${system}.pythoneda-shared-nix
             ];
             pythonImportsCheck = [ ];
 
